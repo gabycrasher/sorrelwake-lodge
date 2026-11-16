@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#102a23">
+    <meta name="description" content="Sorrelwake Lodge is a fictional hospitality website concept created as a design portfolio piece.">
+    <title>Sorrelwake Lodge — A fictional forest retreat</title>
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to the main content</a>
+
+    <!-- ================================================================
+         OPENING EXPERIENCE
+         This is a short, skippable arrival sequence. JavaScript removes it
+         automatically, and reduced-motion visitors bypass the animation.
+    ================================================================= -->
+    <div class="opening" data-opening aria-label="Sorrelwake Lodge opening animation">
+        <div class="opening__noise" aria-hidden="true"></div>
+        <div class="opening__orb" aria-hidden="true"></div>
+        <svg class="opening__landscape" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path class="opening__contour opening__contour--one" d="M-120 510C130 380 335 630 568 484S1024 252 1290 430s390 32 504-54"/>
+            <path class="opening__contour opening__contour--two" d="M-140 610C82 456 328 704 590 558s452-250 710-54 364 58 522-64"/>
+            <path class="opening__contour opening__contour--three" d="M-80 712c264-162 490 62 740-94s434-156 644-10 334 38 480-40"/>
+            <path class="opening__trail" d="M205 680c208-54 290-188 438-132 140 53 192-119 358-125 168-7 200-120 394-140"/>
+        </svg>
+
+        <button class="opening__skip" type="button" data-opening-skip>Skip arrival</button>
+
+        <div class="opening__copy">
+            <p class="opening__eyebrow">Somewhere past the last signal</p>
+            <p class="opening__line">Follow the last light.</p>
+
+            <div class="opening__mark" aria-hidden="true">
+                <span class="opening__keyring"></span>
+                <span class="opening__key">S</span>
+            </div>
+
+            <p class="opening__brand">Sorrelwake Lodge</p>
+            <p class="opening__whisper">The forest has kept your room.</p>
+        </div>
+
+        <div class="opening__door opening__door--left" aria-hidden="true"></div>
+        <div class="opening__door opening__door--right" aria-hidden="true"></div>
+    </div>
+
+    <!-- ================================================================
+         SITE HEADER
+    ================================================================= -->
+    <header class="site-header" data-header>
+        <div class="site-header__inner shell shell--wide">
+            <a class="brand" href="#top" aria-label="Sorrelwake Lodge home">
+                <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M24 3C18 13 10 18 7 28c-2 8 4 15 13 16 0-9 1-18 4-28 1 10 2 19 4 28 8-2 14-8 13-16C39 18 30 13 24 3Z"/>
+                    <path class="brand__vein" d="M24 15v29"/>
+                </svg>
+                <span class="brand__text">
+                    <strong>Sorrelwake</strong>
+                    <small>Lodge · Fictional Highlands</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu">
+                <span class="menu-toggle__label">Menu</span>
+                <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
+            </button>
+
+            <nav class="site-nav" id="site-menu" data-menu aria-label="Primary navigation">
+                <a href="#rooms">Rooms</a>
+                <a href="#rituals">Rituals</a>
+                <a href="#table">The table</a>
+                <a href="#story">Our story</a>
+                <button class="button button--small button--ember" type="button" data-booking-open>Plan a stay</button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ============================================================
+             HERO
+        ============================================================= -->
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <img class="hero__image" src="assets/images/hero-cabin.jpg" alt="Wooden forest cabin with a terrace and outdoor bath" fetchpriority="high">
+            <div class="hero__veil" aria-hidden="true"></div>
+            <div class="hero__grain" aria-hidden="true"></div>
+            <div class="hero__glow" data-hero-glow aria-hidden="true"></div>
+
+            <div class="hero__content shell">
+                <p class="eyebrow eyebrow--light" data-hero-word>Private rooms · Slow rituals · Wilder air</p>
+                <h1 id="hero-title" class="hero__title">
+                    <span data-hero-word>Stay where the forest</span>
+                    <span class="hero__title-accent" data-hero-word>turns the volume down.</span>
+                </h1>
+                <p class="hero__intro" data-hero-word>A fictional hideaway imagined for quiet mornings, firelit evenings and the rare luxury of having nowhere else to be.</p>
+
+                <div class="hero__actions" data-hero-word>
+                    <button class="button button--ember" type="button" data-booking-open>Plan a sample stay</button>
+                    <a class="text-link text-link--light" href="#rooms">Explore the rooms <span aria-hidden="true">↘</span></a>
+                </div>
+            </div>
+
+            <aside class="hero__weather" aria-label="Fictional atmosphere reading">
+                <span class="hero__weather-label">Right now, in our imagination</span>
+                <strong>11° · mist lifting</strong>
+                <span>Fictional reading</span>
+            </aside>
+
+            <div class="hero__scroll" aria-hidden="true">
+                <span>Enter slowly</span>
+                <i></i>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PORTFOLIO SAFETY NOTICE
+        ============================================================= -->
+        <aside class="concept-note" aria-label="Portfolio concept notice">
+            <div class="shell shell--wide concept-note__inner">
+                <span class="concept-note__badge">Portfolio concept</span>
+                <p><strong>Sorrelwake Lodge is entirely fictional.</strong> Every name, place, price, availability and contact detail is invented. No reservation is sent.</p>
+                <span class="concept-note__edition">Edition 01 / 2026</span>
+            </div>
+        </aside>
+
+        <!-- ============================================================
+             QUICK STAY PLANNER
+        ============================================================= -->
+        <section class="quick-plan" aria-label="Sample stay planner">
+            <div class="shell shell--wide">
+                <form class="quick-plan__form" data-quick-plan>
+                    <label>
+                        <span>Arrive</span>
+                        <input type="date" name="arrival" aria-label="Sample arrival date">
+                    </label>
+                    <label>
+                        <span>Leave</span>
+                        <input type="date" name="departure" aria-label="Sample departure date">
+                    </label>
+                    <label>
+                        <span>Travellers</span>
+                        <select name="travellers" aria-label="Number of sample travellers">
+                            <option>2 dreamers</option>
+                            <option>1 quiet soul</option>
+                            <option>3 wanderers</option>
+                            <option>4 old friends</option>
+                        </select>
+                    </label>
+                    <button class="button button--pine" type="submit">Shape the stay</button>
+                </form>
+                <p class="quick-plan__status" data-quick-status aria-live="polite">Dates are illustrative; this planner does not check real availability.</p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             EDITORIAL INTRODUCTION
+        ============================================================= -->
+        <section class="statement section" aria-labelledby="statement-title">
+            <div class="shell statement__grid">
+                <div class="statement__index" data-reveal>
+                    <span>01</span>
+                    <p>A made-up place<br>with a real point of view.</p>
+                </div>
+
+                <div class="statement__copy">
+                    <p class="eyebrow" data-reveal>Considered absence</p>
+                    <h2 id="statement-title" class="display-heading" data-reveal>Not an escape from life. A return to its quieter details.</h2>
+                    <div class="statement__body" data-reveal>
+                        <p>Here, the day is measured differently: steam rising from a cedar bath, a page turned beside the fire, the long pause before rain reaches the roof.</p>
+                        <p>Sorrelwake is a fictional lodge concept designed to show how atmosphere, storytelling and thoughtful interaction can turn a hospitality website into an experience of its own.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             INTERACTIVE ROOM EXPLORER
+        ============================================================= -->
+        <section class="rooms section section--sage" id="rooms" aria-labelledby="rooms-title">
+            <div class="shell shell--wide">
+                <div class="section-heading" data-reveal>
+                    <div>
+                        <p class="eyebrow">Choose your quiet</p>
+                        <h2 id="rooms-title" class="display-heading">Three rooms. Three ways to disappear.</h2>
+                    </div>
+                    <p>Explore fictional room concepts and sample rates. Nothing shown here can be reserved.</p>
+                </div>
+
+                <div class="room-explorer" data-room-explorer>
+                    <div class="room-explorer__stage" data-reveal>
+                        <article class="room-visual is-active" data-room-panel="canopy">
+                            <img src="assets/images/canopy-suite.jpg" alt="A-frame bedroom looking into the forest" loading="lazy">
+                            <div class="room-visual__number">01</div>
+                            <div class="room-visual__caption">
+                                <span>Best for</span>
+                                <strong>Rain listeners</strong>
+                            </div>
+                        </article>
+
+                        <article class="room-visual" data-room-panel="hearth" hidden>
+                            <img src="assets/images/hearth-room.jpg" alt="Warm lodge lounge with a stone fireplace" loading="lazy">
+                            <div class="room-visual__number">02</div>
+                            <div class="room-visual__caption">
+                                <span>Best for</span>
+                                <strong>Fire keepers</strong>
+                            </div>
+                        </article>
+
+                        <article class="room-visual" data-room-panel="fern" hidden>
+                            <img src="assets/images/forest-bath.jpg" alt="Calm bath with a wide woodland view" loading="lazy">
+                            <div class="room-visual__number">03</div>
+                            <div class="room-visual__caption">
+                                <span>Best for</span>
+                                <strong>Long exhalations</strong>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="room-explorer__details" data-reveal>
+                        <div class="room-tabs" role="tablist" aria-label="Sample room types">
+                            <button class="room-tab is-active" type="button" role="tab" aria-selected="true" data-room-tab="canopy">Canopy room</button>
+                            <button class="room-tab" type="button" role="tab" aria-selected="false" data-room-tab="hearth">Hearth room</button>
+                            <button class="room-tab" type="button" role="tab" aria-selected="false" data-room-tab="fern">Fern bath room</button>
+                        </div>
+
+                        <div class="room-copy is-active" data-room-copy="canopy">
+                            <p class="room-copy__kicker">The treeline, at eye level</p>
+                            <h3>Canopy Room</h3>
+                            <p>A steep-roofed retreat imagined with a wall of glass, a writing ledge and the kind of quiet that makes whispering feel too loud.</p>
+                            <ul class="feature-list">
+                                <li>King bed beneath the rafters</li>
+                                <li>Private forest-facing deck</li>
+                                <li>Window seat for two</li>
+                            </ul>
+                            <div class="room-copy__footer">
+                                <p><span>Sample rate</span><strong>From 420 pine tokens</strong></p>
+                                <button class="round-link" type="button" data-booking-open aria-label="Open the sample planner for Canopy Room">↗</button>
+                            </div>
+                        </div>
+
+                        <div class="room-copy" data-room-copy="hearth" hidden>
+                            <p class="room-copy__kicker">For stories after dark</p>
+                            <h3>Hearth Room</h3>
+                            <p>A warm, low-lit room imagined around a hand-built fireplace, deep chairs and a shelf of books with nowhere else to be.</p>
+                            <ul class="feature-list">
+                                <li>Private stone fireplace</li>
+                                <li>Deep soaking bath</li>
+                                <li>Covered morning terrace</li>
+                            </ul>
+                            <div class="room-copy__footer">
+                                <p><span>Sample rate</span><strong>From 480 pine tokens</strong></p>
+                                <button class="round-link" type="button" data-booking-open aria-label="Open the sample planner for Hearth Room">↗</button>
+                            </div>
+                        </div>
+
+                        <div class="room-copy" data-room-copy="fern" hidden>
+                            <p class="room-copy__kicker">Steam among the ferns</p>
+                            <h3>Fern Bath Room</h3>
+                            <p>A secluded suite imagined for restorative stays, with a forest-facing bath, softened daylight and absolutely no urgency.</p>
+                            <ul class="feature-list">
+                                <li>Oversized window bath</li>
+                                <li>Private moss garden</li>
+                                <li>Tea and stillness library</li>
+                            </ul>
+                            <div class="room-copy__footer">
+                                <p><span>Sample rate</span><strong>From 530 pine tokens</strong></p>
+                                <button class="round-link" type="button" data-booking-open aria-label="Open the sample planner for Fern Bath Room">↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             DAY RITUAL — SCROLL-DRIVEN STORY
+        ============================================================= -->
+        <section class="ritual section" id="rituals" aria-labelledby="ritual-title">
+            <div class="shell shell--wide">
+                <div class="ritual__heading" data-reveal>
+                    <p class="eyebrow">A day with no agenda</p>
+                    <h2 id="ritual-title" class="display-heading">Time behaves differently here.</h2>
+                </div>
+
+                <div class="ritual__layout">
+                    <div class="ritual__visual" data-ritual-visual>
+                        <img class="is-active" src="assets/images/a-frame-bath.jpg" alt="Outdoor bath beside a forest cabin" loading="lazy" data-ritual-image="dawn">
+                        <img src="assets/images/woodland-tub.jpg" alt="Woodland bath surrounded by ferns" loading="lazy" data-ritual-image="noon">
+                        <img src="assets/images/mountain-tub.jpg" alt="Wooden outdoor tub with a distant mountain view" loading="lazy" data-ritual-image="dusk">
+                        <div class="ritual__clock" aria-hidden="true"><span data-ritual-time>06:42</span></div>
+                    </div>
+
+                    <ol class="ritual__steps">
+                        <li class="ritual-step is-active" data-ritual-step="dawn" data-time="06:42">
+                            <span class="ritual-step__time">Dawn</span>
+                            <div>
+                                <h3>Wake with the weather.</h3>
+                                <p>Coffee arrives quietly. Mist moves between the trees. The phone can wait.</p>
+                            </div>
+                        </li>
+                        <li class="ritual-step" data-ritual-step="noon" data-time="12:18">
+                            <span class="ritual-step__time">Noon</span>
+                            <div>
+                                <h3>Walk until lunch finds you.</h3>
+                                <p>Follow an invented fern trail, pause at the stream, return when the bread is warm.</p>
+                            </div>
+                        </li>
+                        <li class="ritual-step" data-ritual-step="dusk" data-time="18:57">
+                            <span class="ritual-step__time">Dusk</span>
+                            <div>
+                                <h3>Let the fire finish the day.</h3>
+                                <p>A long soak. A small table. The last light caught in a glass.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             EXPERIENCE BENTO
+        ============================================================= -->
+        <section class="experiences section section--ink" aria-labelledby="experiences-title">
+            <div class="shell shell--wide">
+                <div class="section-heading section-heading--light" data-reveal>
+                    <div>
+                        <p class="eyebrow eyebrow--light">Small rituals, properly noticed</p>
+                        <h2 id="experiences-title" class="display-heading">The luxury is attention.</h2>
+                    </div>
+                    <p>Every experience shown is an invented portfolio detail, designed to suggest how a real lodge could tell its story.</p>
+                </div>
+
+                <div class="experience-grid">
+                    <article class="experience-card experience-card--large spotlight-card" data-spotlight data-reveal>
+                        <img src="assets/images/lakeside-soak.jpg" alt="Outdoor hot tub beside still water" loading="lazy">
+                        <div class="experience-card__scrim"></div>
+                        <div class="experience-card__content">
+                            <span>01 · Water</span>
+                            <h3>A bath at the edge of the weather</h3>
+                            <p>Drawn before you return from the trail. Fictional, private and wonderfully unhurried.</p>
+                        </div>
+                    </article>
+
+                    <article class="experience-card experience-card--quote spotlight-card" data-spotlight data-reveal>
+                        <span class="experience-card__glyph" aria-hidden="true">⌁</span>
+                        <p>“We do not fill your day. We protect the space around it.”</p>
+                        <small>Fictional lodge philosophy</small>
+                    </article>
+
+                    <article class="experience-card experience-card--image spotlight-card" data-spotlight data-reveal>
+                        <img src="assets/images/cabin-terrace.jpg" alt="Rustic cabin terrace surrounded by forest" loading="lazy">
+                        <div class="experience-card__content">
+                            <span>02 · Trail</span>
+                            <h3>Walk beyond the map</h3>
+                        </div>
+                    </article>
+
+                    <article class="experience-card experience-card--list spotlight-card" data-spotlight data-reveal>
+                        <p class="eyebrow eyebrow--light">Included in every imaginary stay</p>
+                        <ul>
+                            <li><span>Morning</span> Fire coffee & warm bread</li>
+                            <li><span>Afternoon</span> Field notes & trail flask</li>
+                            <li><span>Evening</span> Bath salts & quiet record</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             FICTIONAL DINING EXPERIENCE
+        ============================================================= -->
+        <section class="table section" id="table" aria-labelledby="table-title">
+            <div class="shell table__layout">
+                <div class="table__copy">
+                    <p class="eyebrow" data-reveal>The table at Sorrelwake</p>
+                    <h2 id="table-title" class="display-heading" data-reveal>Cooked by the season. Served by the fire.</h2>
+                    <p data-reveal>Our entirely fictional kitchen begins with what the imagined landscape offers and ends with a table that asks everyone to stay a little longer.</p>
+
+                    <div class="table-switch" role="tablist" aria-label="Sample menu time">
+                        <button class="is-active" type="button" role="tab" aria-selected="true" data-menu-time="morning">Morning</button>
+                        <button type="button" role="tab" aria-selected="false" data-menu-time="evening">Evening</button>
+                    </div>
+
+                    <div class="sample-menu is-active" data-menu-panel="morning">
+                        <div><strong>Charred pear oats</strong><span>hazel · forest honey · smoke</span></div>
+                        <div><strong>Ember bread</strong><span>cultured butter · garden salt</span></div>
+                        <div><strong>Quiet cup</strong><span>pine tea · citrus peel · warmth</span></div>
+                    </div>
+
+                    <div class="sample-menu" data-menu-panel="evening" hidden>
+                        <div><strong>Woodland broth</strong><span>mushroom · thyme · black garlic</span></div>
+                        <div><strong>Fire-roasted roots</strong><span>grain · herb oil · crisp leaf</span></div>
+                        <div><strong>Last-light tart</strong><span>apple · sorrel · toasted cream</span></div>
+                    </div>
+
+                    <p class="table__note">Sample menu only. These dishes and ingredients are fictional.</p>
+                </div>
+
+                <figure class="table__image image-wipe" data-reveal>
+                    <img src="assets/images/quiet-arrival.jpg" alt="A guest enjoying an outdoor bath near a cabin" loading="lazy">
+                    <figcaption>Illustrative photography · fictional experience</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             GALLERY
+        ============================================================= -->
+        <section class="gallery section" aria-labelledby="gallery-title">
+            <div class="shell shell--wide">
+                <div class="gallery__heading" data-reveal>
+                    <p class="eyebrow">A few quiet frames</p>
+                    <h2 id="gallery-title" class="display-heading">Look closer.</h2>
+                    <p>Stock photography is used illustratively and does not depict a real Sorrelwake Lodge.</p>
+                </div>
+
+                <div class="gallery__grid">
+                    <figure class="gallery__item gallery__item--tall" data-reveal>
+                        <img src="assets/images/forest-bath.jpg" alt="Bath beside large forest windows" loading="lazy">
+                        <figcaption>Room to exhale</figcaption>
+                    </figure>
+                    <figure class="gallery__item gallery__item--wide" data-reveal>
+                        <img src="assets/images/hero-cabin.jpg" alt="Forest cabin and outdoor bath at twilight" loading="lazy">
+                        <figcaption>The long way home</figcaption>
+                    </figure>
+                    <figure class="gallery__item" data-reveal>
+                        <img src="assets/images/hearth-room.jpg" alt="Fireside lodge interior" loading="lazy">
+                        <figcaption>After dark</figcaption>
+                    </figure>
+                    <figure class="gallery__item" data-reveal>
+                        <img src="assets/images/woodland-tub.jpg" alt="Outdoor bathtub in a green forest" loading="lazy">
+                        <figcaption>Steam & stillness</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             STORY / MANIFESTO
+        ============================================================= -->
+        <section class="story section section--stone" id="story" aria-labelledby="story-title">
+            <div class="shell story__grid">
+                <div class="story__portrait" data-reveal>
+                    <img src="assets/images/mountain-tub.jpg" alt="Wooden hot tub facing a distant landscape" loading="lazy">
+                    <span>Concept image 08</span>
+                </div>
+
+                <div class="story__copy">
+                    <p class="eyebrow" data-reveal>A lodge with no coordinates</p>
+                    <h2 id="story-title" class="display-heading" data-reveal>Built from a feeling, not a place.</h2>
+                    <p data-reveal>Sorrelwake began as a creative question: what if a lodge website felt like arriving before the guest ever packed a bag?</p>
+                    <p data-reveal>The answer is this fictional world—one made from careful pacing, tactile colour, editorial type, real landscape photography and interactions that reward curiosity without getting in the way.</p>
+
+                    <div class="story__signature" data-reveal>
+                        <svg viewBox="0 0 180 58" aria-hidden="true"><path d="M4 43c30-44 14 11 45-8 27-16 9 16 37 0 32-18 20 14 42-5 13-11 25-8 47 5"/></svg>
+                        <div><strong>The imagined keepers</strong><span>of Sorrelwake Lodge</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             FICTIONAL GUEST NOTE
+        ============================================================= -->
+        <section class="guest-note section" aria-label="Fictional guest note">
+            <div class="shell guest-note__inner" data-reveal>
+                <span class="guest-note__quote" aria-hidden="true">“</span>
+                <blockquote>The rare place that understands the difference between having nothing to do and finally having time.</blockquote>
+                <p><strong>Sample guest reflection</strong><span>Fictional — written for this portfolio concept</span></p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             FICTIONAL LOCATION
+        ============================================================= -->
+        <section class="location section section--pine" aria-labelledby="location-title">
+            <div class="shell shell--wide location__grid">
+                <div class="location__copy">
+                    <p class="eyebrow eyebrow--light" data-reveal>Find us nowhere</p>
+                    <h2 id="location-title" class="display-heading" data-reveal>Just beyond the last line on the map.</h2>
+                    <p data-reveal>This address is intentionally fictional. It creates atmosphere without pointing to a real property, road or business.</p>
+                    <address data-reveal>
+                        <strong>Sorrelwake Lodge</strong>
+                        <span>00 Fernlight Track</span>
+                        <span>Fictional Highlands</span>
+                        <span>stay@sorrelwake.invalid</span>
+                        <span>000 000 000 000</span>
+                    </address>
+                    <button class="button button--paper" type="button" data-booking-open>Open the sample planner</button>
+                </div>
+
+                <div class="location__map" aria-label="Decorative fictional map" data-reveal>
+                    <svg viewBox="0 0 700 620" role="img" aria-labelledby="map-title map-description">
+                        <title id="map-title">Illustrated map to fictional Sorrelwake Lodge</title>
+                        <desc id="map-description">A decorative map with invented places and no real navigation value.</desc>
+                        <g class="map-contours">
+                            <path d="M-10 143c121-76 172 30 279-26 99-52 167-21 245 14 82 38 136-12 212-61"/>
+                            <path d="M-40 225c129-83 211 23 319-26 118-53 170-8 247 31 79 40 131 1 212-57"/>
+                            <path d="M-28 334c122-71 212 8 322-30 127-45 175 12 250 43 75 31 118-2 184-46"/>
+                            <path d="M-16 458c104-42 192-14 287-38 117-30 195 25 283 35 65 8 108-13 174-48"/>
+                            <path d="M45 553c89-29 154-6 245-20 115-18 193 29 284 25"/>
+                        </g>
+                        <path class="map-road" d="M58 536c103-40 85-127 190-145 99-17 60-98 152-130 82-29 105-98 217-124"/>
+                        <path class="map-river" d="M-10 90c101 55 86 146 179 170 101 26 100 124 190 157 95 34 81 114 192 159"/>
+                        <g class="map-marker map-marker--lodge" transform="translate(404 250)">
+                            <circle r="22"/>
+                            <path d="M0-8 9 4H5v9H-5V4h-4Z"/>
+                        </g>
+                        <g class="map-label" transform="translate(438 244)">
+                            <text>SORRELWAKE</text><text y="22">you imagined it</text>
+                        </g>
+                        <g class="map-label map-label--small" transform="translate(112 489)"><text>FERNLIGHT TRACK</text></g>
+                        <g class="map-label map-label--small" transform="translate(504 104)"><text>MIST RIDGE</text></g>
+                        <g class="map-label map-label--small" transform="translate(115 174)"><text>THE QUIET WATER</text></g>
+                    </svg>
+                    <span class="location__map-note">Not for navigation · map is fictional</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             FAQ
+        ============================================================= -->
+        <section class="faq section" aria-labelledby="faq-title">
+            <div class="shell faq__grid">
+                <div class="faq__intro" data-reveal>
+                    <p class="eyebrow">Before you pretend to pack</p>
+                    <h2 id="faq-title" class="display-heading">Good questions.</h2>
+                    <p>The most important answer: this is a design demonstration, not an operating lodge.</p>
+                </div>
+
+                <div class="faq__list" data-faq>
+                    <article class="faq-item is-open">
+                        <button type="button" aria-expanded="true">
+                            <span>Can I actually book Sorrelwake Lodge?</span><i aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer"><p>No. Sorrelwake Lodge is fictional, the planner is a front-end demonstration, and nothing you enter is stored or sent.</p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button type="button" aria-expanded="false">
+                            <span>Is the address or contact information real?</span><i aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer" hidden><p>No. The address, phone number and .invalid email are deliberately non-operational portfolio placeholders.</p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button type="button" aria-expanded="false">
+                            <span>Are the photographs real?</span><i aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer" hidden><p>The photography shows real cabins and interiors, but it is illustrative stock imagery and does not depict a real Sorrelwake property.</p></div>
+                    </article>
+                    <article class="faq-item">
+                        <button type="button" aria-expanded="false">
+                            <span>What is this website for?</span><i aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-item__answer" hidden><p>It demonstrates a high-end hospitality website concept: art direction, responsive design, accessible interaction and motion storytelling.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             FINAL CALL TO ACTION
+        ============================================================= -->
+        <section class="finale" aria-labelledby="finale-title">
+            <img src="assets/images/hero-cabin.jpg" alt="Forest cabin glowing at the edge of the trees" loading="lazy">
+            <div class="finale__veil" aria-hidden="true"></div>
+            <div class="shell finale__content" data-reveal>
+                <p class="eyebrow eyebrow--light">Your room is almost imaginary</p>
+                <h2 id="finale-title" class="display-heading">Come for the quiet.<br>Stay for the feeling.</h2>
+                <button class="button button--ember" type="button" data-booking-open>Plan a fictional stay</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================================================================
+         FOOTER
+    ================================================================= -->
+    <footer class="site-footer">
+        <div class="shell shell--wide site-footer__top">
+            <div>
+                <a class="brand brand--footer" href="#top" aria-label="Back to the top of Sorrelwake Lodge">
+                    <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+                        <path d="M24 3C18 13 10 18 7 28c-2 8 4 15 13 16 0-9 1-18 4-28 1 10 2 19 4 28 8-2 14-8 13-16C39 18 30 13 24 3Z"/>
+                        <path class="brand__vein" d="M24 15v29"/>
+                    </svg>
+                    <span class="brand__text"><strong>Sorrelwake</strong><small>A fictional lodge concept</small></span>
+                </a>
+                <p>A portfolio experiment in quiet luxury, editorial storytelling and interaction design.</p>
+            </div>
+
+            <nav aria-label="Footer navigation">
+                <a href="#rooms">Rooms</a>
+                <a href="#rituals">Rituals</a>
+                <a href="#table">The table</a>
+                <a href="#story">Story</a>
+            </nav>
+
+            <div class="site-footer__contact">
+                <span>Fictional contact</span>
+                <strong>stay@sorrelwake.invalid</strong>
+                <strong>000 000 000 000</strong>
+            </div>
+        </div>
+
+        <div class="shell shell--wide site-footer__bottom">
+            <p>© 2026 Sorrelwake Lodge concept. No real lodge, booking or offer exists.</p>
+            <p>Illustrative stock photography used locally for this non-commercial portfolio demonstration.</p>
+        </div>
+    </footer>
+
+    <!-- ================================================================
+         DEMO BOOKING DIALOG
+         The form intentionally has no action and never sends information.
+    ================================================================= -->
+    <dialog class="booking-dialog" data-booking-dialog aria-labelledby="booking-title">
+        <button class="booking-dialog__close" type="button" data-booking-close aria-label="Close sample stay planner">×</button>
+
+        <div class="booking-dialog__art" aria-hidden="true">
+            <img src="assets/images/canopy-suite.jpg" alt="">
+            <div><span>Sorrelwake</span><strong>Make room for quiet.</strong></div>
+        </div>
+
+        <div class="booking-dialog__body">
+            <p class="eyebrow">Demo stay planner</p>
+            <h2 id="booking-title">Imagine your arrival.</h2>
+            <p>This portfolio form is for interaction only. Your entries stay in this browser and are never submitted.</p>
+
+            <form data-booking-form>
+                <div class="field-row">
+                    <label><span>Sample arrival</span><input type="date" name="arrival"></label>
+                    <label><span>Sample departure</span><input type="date" name="departure"></label>
+                </div>
+                <label>
+                    <span>Choose an imaginary room</span>
+                    <select name="room">
+                        <option>Canopy Room</option>
+                        <option>Hearth Room</option>
+                        <option>Fern Bath Room</option>
+                    </select>
+                </label>
+                <label>
+                    <span>What kind of quiet?</span>
+                    <select name="mood">
+                        <option>Rain, books and a long bath</option>
+                        <option>Forest walks and an early fire</option>
+                        <option>Good food and no decisions</option>
+                    </select>
+                </label>
+                <button class="button button--pine button--full" type="submit">Create my sample stay</button>
+                <p class="booking-dialog__status" data-booking-status aria-live="polite"></p>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="vendor/gsap.min.js"></script>
+    <script src="vendor/ScrollTrigger.min.js"></script>
+    <script src="js/opening.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
