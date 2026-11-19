@@ -114,7 +114,8 @@
             autoAlpha: 0,
             duration: 0.9,
             stagger: 0.12,
-            delay: 4.45,
+            // Start as the opening doors part (about 3 s), or straight away when the opening is skipped.
+            delay: document.body.classList.contains('is-opening') ? 3.0 : 0.15,
             ease: 'power3.out'
         });
 
@@ -244,6 +245,28 @@
     const quickPlan = one('[data-quick-plan]');
     const quickStatus = one('[data-quick-status]');
 
+    // Both planners open WhatsApp with the chosen dates pre-filled (no form action, per tests/site-safety.ps1).
+    const WA_NUMBER = '256756728345';
+    function whatsapp(lines) {
+        const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        return url;
+    }
+
+    function prettyDate(value) {
+        if (!value) {
+            return 'flexible';
+        }
+        const date = new Date(`${value}T12:00:00`);
+        return Number.isNaN(date.getTime()) ? value : date.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
     function openBookingDialog() {
         if (!bookingDialog) {
             return;
@@ -275,13 +298,23 @@
 
     bookingForm?.addEventListener('submit', (event) => {
         event.preventDefault();
-        bookingStatus.textContent = 'Demo complete — your fictional stay was shaped, but nothing was stored or sent.';
+        const data = new FormData(bookingForm);
+        whatsapp([
+            "Hello Sorrelwake Lodge, I'd like to plan a stay.",
+            `Arrival: ${prettyDate(data.get('arrival'))} · Departure: ${prettyDate(data.get('departure'))}`,
+            `Room: ${data.get('room')} · Looking for: ${data.get('mood')}`
+        ]);
+        bookingStatus.textContent = 'WhatsApp has opened with your stay details. Just press send (this showcase demo books nothing automatically).';
     });
 
     quickPlan?.addEventListener('submit', (event) => {
         event.preventDefault();
-        quickStatus.textContent = 'Demo preview ready. Open “Plan a stay” to explore the fictional room choices; nothing is sent.';
-        openBookingDialog();
+        const data = new FormData(quickPlan);
+        whatsapp([
+            "Hello Sorrelwake Lodge, I'd like to check availability.",
+            `Arrival: ${prettyDate(data.get('arrival'))} · Departure: ${prettyDate(data.get('departure'))} · Travellers: ${data.get('travellers')}`
+        ]);
+        quickStatus.textContent = 'WhatsApp has opened with your dates. Just press send. Want to pick a room too? Use “Plan a stay”.';
     });
 
     document.addEventListener('keydown', (event) => {
