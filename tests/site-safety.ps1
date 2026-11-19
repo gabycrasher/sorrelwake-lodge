@@ -46,7 +46,9 @@ Assert-True ($html -match 'data-menu-toggle') 'The mobile menu control is missin
 Assert-True ($html -match 'data-room-tab') 'The interactive room selector is missing.'
 Assert-True ($html -match 'data-booking-open') 'The demo stay-planner trigger is missing.'
 Assert-True ($html -notmatch '<form[^>]+action\s*=') 'A form action was found; the concept must not send data.'
-Assert-True ($html -notmatch '<a[^>]+href\s*=\s*["''](?:https?:|mailto:|tel:)') 'A live external, email or telephone link was found.'
+# The only live link allowed is the designer's WhatsApp button (class wa-float); the fictional lodge itself has no real contact details.
+Assert-True ($html -notmatch '<a(?![^>]*class="wa-float")[^>]+href\s*=\s*["''](?:https?:|mailto:|tel:)') 'A live external, email or telephone link was found.'
+Assert-True ($html -match 'class="wa-float" href="https://wa\.me/256756728345\?text=') 'The designer WhatsApp button is missing.'
 Assert-True ($html -notmatch '<img[^>]+src\s*=\s*["'']https?:') 'A hotlinked image was found; all images must be local.'
 
 $sectionCount = ([regex]::Matches($html, '<section\b')).Count

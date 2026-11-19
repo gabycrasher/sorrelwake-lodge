@@ -2646,3 +2646,14 @@ address {
         transform: none !important;
     }
 }
+
+/* WhatsApp: chat with the designer (same button on every concept site) */
+.wa-float { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 900; display: inline-flex; align-items: center; gap: .55rem; height: 56px; padding: 0 1.25rem 0 1rem; border-radius: 999px; background: #25D366; color: #fff; font: 700 15px/1 system-ui, -apple-system, "Segoe UI", sans-serif; text-decoration: none; box-shadow: 0 12px 28px -10px rgba(7, 94, 84, .65), 0 2px 6px rgba(0, 0, 0, .18); transition: transform .25s ease, box-shadow .25s ease; }
+.wa-float svg { width: 26px; height: 26px; flex: none; }
+.wa-float:hover, .wa-float:focus-visible { transform: translateY(-2px); box-shadow: 0 16px 34px -10px rgba(7, 94, 84, .75), 0 2px 6px rgba(0, 0, 0, .2); color: #fff; }
+.wa-float:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.wa-float::before { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 0 0 0 rgba(37, 211, 102, .55); animation: wa-ping 2.6s ease-out 3s infinite; }
+@keyframes wa-ping { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .5); } 70%, 100% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); } }
+@media (max-width: 640px) { .wa-float { width: 56px; padding: 0; justify-content: center; } .wa-float span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
+@media (prefers-reduced-motion: reduce) { .wa-float::before { animation: none; } .wa-float { transition: none; } }
+@media print { .wa-float { display: none; } }

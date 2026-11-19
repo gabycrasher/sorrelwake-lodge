@@ -57,6 +57,20 @@
 
     skipButton?.addEventListener('click', skipOpening);
 
+    // Play once per visit; returning to the page in the same session goes straight to the site.
+    let seenOpening = false;
+    try {
+        seenOpening = sessionStorage.getItem('sw-opening') === '1';
+        sessionStorage.setItem('sw-opening', '1');
+    } catch (error) {
+        seenOpening = false;
+    }
+
+    if (seenOpening) {
+        completeOpening();
+        return;
+    }
+
     if (prefersReducedMotion) {
         completeOpening();
         return;
@@ -158,4 +172,7 @@
             autoAlpha: 0,
             duration: 0.25
         }, 4.5);
+
+    // Keep the whole arrival to about 3.4 seconds.
+    timeline.timeScale(1.4);
 }());
